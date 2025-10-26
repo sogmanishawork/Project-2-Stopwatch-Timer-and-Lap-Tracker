@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minute Master- Stopwatch and Timer</title>
+    <link rel="stylesheet" href="stopwatchproj225oct25.css">
+    <link rel="icon" type="image/png" sizes= "60x60" href="Project-2-Stopwatch-Timer-and-Lap-Tracker\Images and Assets\Website Logo- Minute Master.png">  
+</head>
+<body class="light-mode">
+
+    <audio id="timer-sound" preload="auto">
+       <source src="bell-notification-337658.mp3" type="audio/wav">
+    </audio>
+    <header>
+        <img src="Images and Assets\Website Logo- Minute Master.png" alt="Minute Master Logo" class="logo">
+        <h1>Minute Master - Stopwatch and Timer</h1>
+        <button id= "toggle-theme" class="toggle-theme-btn">🌙 Dark Mode</button>
+    </header>
+    <div class="center-content">
+    <div class="hero-area">
+
+        <div class="hero-content">
+           <h1 class="hero-title">Online Free Stopwatch, Timer and Lap Tracker</h1>
+        
+        </div>
+    </div>
+    <main>
+        <section id="stopwatch" class="card">
+            <h2>⏱️ Stopwatch</h2>
+            <div id="stopwatch-display" class="display">00:00:00</div>
+            <div class="controls">
+              <button id="start-stopwatch" class="btn btn-start">Start</button>
+              <button id="stop-stopwatch" class="btn btn-stop">Stop</button>
+              <button id="reset-stopwatch" class="btn btn-reset">Reset</button>
+              <button id="lap-stopwatch" class="btn btn-lap">Lap</button>
+            </div>
+        </section>
+
+        <section id="timer" class="card">
+            <h2>⏲️ Timer</h2>
+            <div class="timer-input">
+              <input type="number" id="timer-minutes" placeholder="Min" min="0" max="99">
+              <span>:</span>
+              <input type="number" id="timer-seconds" placeholder="Sec" min="0" max="59">
+            </div>
+            <div id="timer-display" class="display">00:00</div>
+            <div class="timer-progress">
+                <div id="timer-progress-bar"></div>
+            </div>
+            <div class="controls">
+                <button id="start-timer" class="btn btn-start">Start</button>
+                <button id="stop-timer" class="btn btn-stop">Stop</button>
+                <button id="set-timer" class="btn btn-start">Set Timer</button>
+                <button id="reset-timer" class="btn btn-reset">Reset</button>
+            </div>
+        </section>
+
+        <section id="lap-tracker" class="card">
+            <h2>🗒️Lap Tracker</h2>
+            <div id="lap-list" class="lap-list">
+                <p class="no-laps">No laps recorded yet</p>
+            </div>
+            <div class="controls">
+                <button id="clear-laps" class="btn btn-reset">Clear All Laps</button>
+                <button id="export-laps" class="btn btn-secondary">Export CSV</button>
+            </div>
+            
+        </section>
+    </main>
+    </div>
+    
+    <div id="notification" class="notification hidden">
+        <span id="notification-text">Timer Complete!</span>
+    </div>
+
+    <script src="stopwatchproj225oct25.js"></script>
+</body>
+</html>
